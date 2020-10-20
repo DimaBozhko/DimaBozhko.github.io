@@ -1,98 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<title>lex</title>
-	<link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,900&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Axit</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<img class="header__logo" src="image/logo.svg">
-			<div class="header__logo-wrapper">
-				<h2 class="header__tegline">Юрист-сервіс</h2>
-				<p class="header__text">Ваш юридичний помічник</p>
-			</div>
-			<nav class="header__nav">
-				<ul class="header__menu">
-					<li class="header__menu-item">
-						Головна
-					</li>
-					<li class="header__menu-item">
-						Про нас
-					</li>
-					<li class="header__menu-item servicesBtn">
-						Послуги
-					</li>
-					<li class="header__menu-item">
-						Контанки
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="main">
-			<section class="banner show fade main__item">
-				<h2 class="banner__headline">
-					Насолоджуйтесь життям, а юридичні питання залишіть нам.
-				</h2>
-				<button class="banner__btn">Зателефонуйте</button>
-			</section>
-			<section class="about show  fade main__item">
-				<h2 class="about__headline">Юрист-сервіс – це:</h2>
-				<div class="about-item fade bg-gj">
-					<p class="about-item__text">Більше 100 постійних клієнтів</p>
-				</div>
-				<div class="about-item fade bg-document">
-					<p class="about-item__text">Понад 5000 оформлених договорів</p>
-				</div>
-				<div class="about-item fade bg-justice">
-					<p class="about-item__text">Успішна судова практика</p>
-				</div>
-			</section>
-			<section class="services show fade main__item">
-				<div class="services-tegline-wrapper">
-					<h2 class="services-tegline-wrapper__headline">Наші послуги</h2>
-					<p class="services-tegline-wrapper__text">Які б труднощі вас не спіткали у нас є необхідні ресурси та досвід для вирішення будь-яких  юридичних питань. Ознайомитись з інформацією про наші послуги ви можете нижче. Якщо у вас виникли питання чи особливі побажання зателефонуйте нам.
-					</p>
-				</div>
-				<div class="services-slider">
-					<div class="slider__btn back"><</div>
-					<div class="services-slider-item fade bg-one">
-						<p class="services-slider-item__text">Оформлення документів на нерухомість</p>
-					</div>
-					<div class="services-slider-item fade bg-two">
-						<p class="services-slider-item__text">Оформлення спадщини</p>
-					</div>
-					<div class="services-slider-item fade bg-three">
-						<p class="services-slider-item__text">Аналіз та складання договорів</p>
-					</div>
+  <header class="header">
+    <div class="header-wrapper">
+      <p class="logo">AX<span>IT</span></p>
+      <nav class="nav hide">
+        <a class="nav__item " href="#">Features</a>
+        <a class="nav__item " href="#">About</a>
+        <a class="nav__item " href="#">Pricing</a>
+        <a class="nav__item " href="#">Reviews</a>
+        <a class="nav__item " href="#">Contact</a>
+      </nav>
+      <div class="burger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="banner">
+      <div class="banner-wrapper">
+        <p class="logo logo--margin-font-size">AX<span>IT</span></p>
+        <h2 class="banner__tagline"><span>MODERN AXURE TEMPLATE</span> FOR BEAUTIFUL PROTOTYPES</h2>
+        <p class="banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet, consectetur adipiscing elit</p>
+        <button class="banner__btn">Download</button>
+      </div>
+      <form class="banner-form">
+        <p class="banner-form__headline">Try Your <span>FREE</span> Trial Today</p>
+        <input class="banner-form__item" type="text" name="name" placeholder="Name">
+        <input class="banner-form__item" type="text" name="Email" placeholder="Email" >
+        <input class="banner-form__item" type="password" name="Password" placeholder="Password">
+        <button class="banner-form__btn">Get Started</button>
+      </form>
+    </section>
+    <section class="social">
+      <div class="social-wrapper">
+        <h2 class="social__headline">Social Media</h2>
+        <p class="social__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Aeneadolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="wrapper-social">
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#facebook"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#twitter"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#instagram"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#rss"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#pinterest"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#google"></use>
+        </svg>
+      </div>
+    </section>
+    <section class="tabs">
+      <div class="tabs-btn">
+        <div class="tabs-btn__item">TAB 1</div>
+        <div class="tabs-btn__item">TAB 2</div>
+        <div class="tabs-btn__item">TAB 3</div>
+      </div>
+      <div class="tabs-content show">
+        <div>
+          <h2 class="tabs-content__headline">Tabs with soft transitioning effect.</h2>
+          <p class="tabs-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+          <p class="tabs-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+          <button class="tabs-content__btn">Download</button>
+        </div>
+        <img class="tabs__img tabs__img--width" src="image/image-Town.png" alt="image" width="600" height="300">
+      </div>
+      <div class="tabs-content hide">
+        <div>
+          <h2 class="tabs-content__headline">Viverra orci sagittis eu volutpat</h2>
+          <p class="tabs-content__text">Nisl purus in mollis nunc sed id semper risus in. Vitae tempus quam pellentesque nec nam aliquam. Amet nisl purus in mollis nunc.Proin sagittis nisl rhoncus mattis rhoncus urna neque. Neque viverra justo nec ultrices dui sapien eget mi. Eu volutpat odio facilisis mauris sit amet massa. Lacus laoreet non curabitur gravida arcu ac tortor dignissim.</p>
+          <p class="tabs-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+          <button class="tabs-content__btn">Download</button>
+        </div>
+        <img class="tabs__img" src="image/image-town2.png" alt="image" width="400" height="250">
+      </div>
+      <div class="tabs-content hide">
+        <div>
+          <h2 class="tabs-content__headline">Nibh tortor id aliquet lectus</h2>
+          <p class="tabs-content__text">Pellentesque sit amet porttitor eget dolor. In massa tempor nec feugiat. Euismod lacinia at quis risus. Pretium quam vulputate dignissim suspendisse in est ante in. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Mi sit amet mauris commodo quis. Ornare lectus sit amet est placerat in.</p>
+          <p class="tabs-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+          <button class="tabs-content__btn">Download</button>
+        </div>
+        <img class="tabs__img tabs__img--margin" src="image/image-Town33.png" alt="image" width="350" height="250">
+      </div>
 
-					<div class="slider__btn next">></div>
-				</div>
-			</section>
-			<section class="contact show fade main__item">
-				<h2 class="contact__headline">З нами можна зв'язатись за допомогою</h2>
-				<div class="contact-phone contact-item">
-					<svg class="contact-item__svg">
-						<use xlink:href="image/sprite.svg#phone"></use>
-					</svg>
-					<!--<h2 class="contact-item__headline">Телефона</h2>-->
-					<p class="contact-item__text"> +38 (099) 83 24 457</p>
-					<p class="contact-item__text"> +38 (096) 74 11 226</p>
-					<p class="contact-item__text"> +38 (048) 19 69 338</p>
-				</div>
-				<div class="contact-mail contact-item">
-					<svg class="contact-item__svg">
-						<use xlink:href="image/sprite.svg#mail"></use>
-					</svg>
-					<!--<h2 class="contact-item__headline">Електронної пошти</h2>-->
-					<p class="contact-item__text">JusticeServic@gmail.com</p>
-					<p class="contact-item__text">lexUA@gmail.com</p>
-					<p class="contact-item__text">Deure@gmail.com</p>
-				</div>
-			</section>
-		</main>
-	</div>
-	<script src="js/script.js"></script>
+    </section>
+    <section class="section">
+      <img class="section__img" src="image/sub_list-img.png" alt="image">
+      <div class="wrapper">
+        <h2 class="section__headline">Sub list section</h2>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean</p>
+        <p class="section__text" ><span class="text-icon-one">Title </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean</p>
+        <p class="section__text"><span class="text-icon-two">Title </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+      </div>
+    </section>
+    <section class="section section--bg">
+      <img class="section__img img-order" src="image/standard-image.png" alt="image">
+      <div class="wrapper wrapper-order">
+        <h2 class="section__headline">Standard Picture Section</h2>
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur</p>
+
+        <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. AeneanLorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean</p>
+      </div>
+    </section>
+    <section class="process">
+      <h2 class="process__headline">WHY THIS IS AWESOME</h2>
+      <p class="process__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="process-item">
+        <img class="process-item__image" src="image/icon4.png" alt="image">
+        <h2 class="process-item__headline">Thoughtful Design</h2>
+        <p class="process-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. Aenea</p>
+      </div>
+      <div class="process-item">
+        <img class="process-item__image" src="image/icon5.png" alt="image">
+        <h2 class="process-item__headline">Well Crafted</h2>
+        <p class="process-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. Aenea</p>
+      </div>
+      <div class="process-item">
+        <img class="process-item__image" src="image/icon3.png" alt="image">
+        <h2 class="process-item__headline">Easy to Customize</h2>
+        <p class="process-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. AeneaLorem ipsum dolor sit amet, consectetur adipiscing  elit. Aenea</p>
+      </div>
+    </section>
+    <section class="pricing">
+      <h2 class="pricing__headline">PRICING OPTIONS</h2>
+      <p class="pricing__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="pricing-item">
+        <h2 class="pricing-item__headline">Basic</h2>
+        <p class="pricing-item__tagline">$<span>0</span></p>
+        <p class="pricing-item__text pricing-item__text--tagline">free for life</p>
+        <p class="pricing-item__text pricing-item__text--style">OUR MOST POPULAR</p>
+        <p class="pricing-item__text arr">1 gb of space</p>
+        <p class="pricing-item__text">10 gb of bandwidth</p>
+        <p class="pricing-item__text">3 websites</p>
+        <p class="pricing-item__text">Basic Customization</p>
+        <p class="pricing-item__text">wordpress integration</p>
+        <p class="pricing-item__text">email support</p>
+      </div>
+      <div class="pricing-item">
+        <h2 class="pricing-item__headline">Professional</h2>
+        <p class="pricing-item__tagline">$<span>19</span></p>
+        <p class="pricing-item__text pricing-item__text--tagline">Monthly Payment</p>
+        <p class="pricing-item__text pricing-item__text--style">OUR MOST POPULAR</p>
+        <p class="pricing-item__text arr">5 gb of space</p>
+        <p class="pricing-item__text">50 gb of bandwidth</p>
+        <p class="pricing-item__text">12 websites</p>
+        <p class="pricing-item__text">Advanced Customization</p>
+        <p class="pricing-item__text">wordpress integration</p>
+        <p class="pricing-item__text">email support</p>
+      </div>
+      <div class="pricing-item">
+        <h2 class="pricing-item__headline">Enterprise</h2>
+        <p class="pricing-item__tagline">$<span>70</span></p>
+        <p class="pricing-item__text pricing-item__text--tagline">Monthly Payment</p>
+        <p class="pricing-item__text pricing-item__text--style">OUR MOST POPULAR</p>
+        <p class="pricing-item__text arr">Unlimited space</p>
+        <p class="pricing-item__text">unlimited bandwidth</p>
+        <p class="pricing-item__text">100 websites</p>
+        <p class="pricing-item__text">Advanced Customization</p>
+        <p class="pricing-item__text">wordpress integration</p>
+        <p class="pricing-item__text">24/7 customer support</p>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2 class="testimonials__headline">WHAT OUR CUSTOMERS ARE SAYING</h2>
+      <p class="testimonials__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. copy</p>
+      <div class="testimonials-item">
+        <p class="testimonials-item__text">Lorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. Dolo</p>
+        <img class="testimonials-item__image" src="image/foto.jpg" alt="image">
+        <p class="testimonials-item__name">Jeremy H. <span>Manager</span></p>
+      </div>
+      <div class="testimonials-item">
+        <p class="testimonials-item__text">Lorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. Dolo</p>
+        <img class="testimonials-item__image" src="image/foto2.jpg" alt="image">
+        <p class="testimonials-item__name">Jeremy H. <span>Manager</span></p>
+      </div>
+      <div class="testimonials-item">
+        <p class="testimonials-item__text">Lorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. DoloLorem ipsum dolor sit amet,  consectetur adipisicing elit. Dolo</p>
+        <img class="testimonials-item__image" src="image/foto3.jpg" alt="image">
+        <p class="testimonials-item__name">Jeremy H. <span>Manager</span></p>
+      </div>
+    </section>
+    <section class="custom">
+      <h2 class="custom__headline">STYLISH AXURE DESIGN</h2>
+      <p class="custom__text">Use the sections you need, remove the ones you don't.  Create g</p>
+      <button class="custom__btn">Download</button>
+    </section>
+    <section class="contact">
+      <h2 class="custom__headline">CONTACT US</h2>
+      <p class="custom__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. copy 3</p>
+      <form class="contact-form-wrapper">
+        <div class="wrapper">
+          <input class="contact-form__item" type="text" name="Name" placeholder="Name">
+          <input class="contact-form__item" type="text" name="mail" placeholder="Email">
+          <input class="contact-form__item" type="text" name="sub" placeholder="Subject">
+        </div>
+        <textarea class="contact-form__item contact-form__item--width" name="message" placeholder="Message"></textarea>
+        <button class="contact__btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+      <div class="wrapper-social">
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#facebook"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#twitter"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#instagram"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#rss"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#pinterest"></use>
+        </svg>
+        <svg class="social__item">
+          <use xlink:href="image/sprite-social.svg#google"></use>
+        </svg>
+      </div>
+    <p class="footer__bottom-text">© 2019 Axure Themes</p>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
