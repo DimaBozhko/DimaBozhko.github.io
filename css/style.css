@@ -411,7 +411,6 @@ button {
 .header--margin-padding {
   padding: 0 20px 10px 20px; }  
 }
-
 @media screen and (min-width: 768px) {
   .header {
     border-bottom: none; }
