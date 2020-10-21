@@ -409,7 +409,7 @@ button {
 
 .header--margin-padding {
   padding: 0 20px 10px 20px; }  
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px) {
   .header {
     border-bottom: none; }
     .header .header-logo {
@@ -461,7 +461,7 @@ button {
   margin: 0 0 20px 0;
   padding: 20px; }
 
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px) {
   .main .catalog .catalog__headline {
     width: 100%;
     font-size: 32px;
@@ -516,7 +516,7 @@ button {
   padding: 0 20px 20px 20px;
   margin: 0 auto 20px auto; }
 
-@media screen and (min-device-width: 768px) {
+@media screen and (min-width: 768px) {
   .main .catalog .catalog-item {
     width: calc((100% / 12) * 6 - 40px);
     max-width: 320px;
@@ -903,6 +903,7 @@ button {
     justify-content: space-between; } }
 
 .footer .footer__headline {
+  padding: 0 10px;
   font-size: 26px;
   text-align: center;
   border-bottom: 2px solid #cdcdcd; }
