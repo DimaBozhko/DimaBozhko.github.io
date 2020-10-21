@@ -516,7 +516,7 @@ button {
   padding: 0 20px 20px 20px;
   margin: 0 auto 20px auto; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-device-width: 768px) {
   .main .catalog .catalog-item {
     width: calc((100% / 12) * 6 - 40px);
     max-width: 320px;
