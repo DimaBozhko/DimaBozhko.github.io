@@ -2,18 +2,20 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 	let menu = document.querySelector(".menu"),
-			menuItem = document.querySelectorAll(".menu-item"),
-			icon = document.querySelectorAll(".icon"),
-			iconJs = document.querySelectorAll(".icon-js"),
-			menuItemText = document.querySelectorAll(".menu-item__text"),
-			bg = ["bg-green", "bg-red", "bg-blue"],
-			contentItem = document.querySelectorAll(".content-item");
+		menuItem = document.querySelectorAll(".menu-item"),
+		icon = document.querySelectorAll(".icon"),
+		iconJs = document.querySelectorAll(".icon-js"),
+		menuItemText = document.querySelectorAll(".menu-item__text"),
+		bg = ["bg-green", "bg-red", "bg-blue"],
+		contentItem = document.querySelectorAll(".content-item"),
+		header = document.querySelector(".header");
 
 let num = 0;
 function hideMenuItem(e) {
 	num++;
 	for (let i = 0; i <= 2; i++) {
 		menuItem[i].classList.toggle("menu-item--hide")
+		header.classList.toggle("header-height")
 	}
 	menuItem.forEach((item, i) => {
 		if (e.target == item) {
@@ -92,7 +94,6 @@ function showContent(e) {
 
 	menu.addEventListener("click", (e) => {
 	console.log(e.target)
-
 		if (e.target && e.target.classList.contains("menu-item") 
 			|| e.target.classList.contains("icon") || e.target.classList.contains("icon-js")  
 			|| e.target.classList.contains("menu-item__text")) {
