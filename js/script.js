@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		contentItem = document.querySelectorAll(".content-item"),
 		header = document.querySelector(".header");
 
-let num = 0;
+let num = 0; 
 function hideMenuItem(e) {
 	num++;
 	for (let i = 0; i <= 2; i++) {
@@ -71,23 +71,23 @@ function hideMenuItem(e) {
 function showContent(e) {
 	menuItem.forEach((item, i) => {
 		if (e.target == item) {
-			contentItem[i].classList.toggle("hide");
+			contentItem[i].classList.toggle("height-hide");
 		}
 	})
 	icon.forEach((item, i) => {
 		if (e.target == item) {
-			contentItem[i].classList.toggle("hide");
+			contentItem[i].classList.toggle("height-hide");
 		}
 
 	})
 	menuItemText.forEach((item, i) => {
 		if (e.target == item) {
-			contentItem[i].classList.toggle("hide");
+			contentItem[i].classList.toggle("height-hide");
 		}
 	})
 	iconJs.forEach((item, i) => {
 		if (e.target == item) {
-			contentItem[i].classList.toggle("hide");
+			contentItem[i].classList.toggle("height-hide");
 		}
 	})	
 }
