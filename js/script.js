@@ -9,7 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		bg = ["bg-green", "bg-red", "bg-blue"],
 		contentItem = document.querySelectorAll(".content-item"),
 		header = document.querySelector(".header"),
-		main = document.querySelector(".main");
+		main = document.querySelector(".main"),
+		contact = document.querySelector(".contact"),
+		contactItem = document.querySelectorAll(".contact-item"),
+		contactText = document.querySelectorAll(".contact-item__text"),
+		contactItemIcon = document.querySelectorAll(".contact-item__icon"),
+		foto = document.querySelector(".foto"),
+		fotoImg = document.querySelector(".foto-img"),
+		name = document.querySelector(".i-am__name");
+
 
 let num = 0; 
 function hideMenuItem(e) {
@@ -97,6 +105,57 @@ function showContent(e) {
 		}
 	})	
 }
+
+let q = 0;
+
+function showContact(e) {
+	console.log(e.target)
+		q++;
+
+	contactItemIcon.forEach((item, i) => {
+		if (e.target == item) {
+			contactText[i].classList.toggle("hide");
+			if (q == 1) {
+				foto.classList.add("foto-change");
+				fotoImg.classList.add("foto-img-change");
+				name.classList.add("i-am__name--margin");
+			} 
+			else if (q > 1 && contactText[0].classList.contains("hide") 
+				&& contactText[1].classList.contains("hide")) {
+				foto.classList.remove("foto-change");
+				fotoImg.classList.remove("foto-img-change");
+				name.classList.remove("i-am__name--margin");
+				q = 0;
+			}
+		}
+	})
+	iconJs.forEach((item, i) => {
+		if (e.target == item) {
+			contactText[i].classList.toggle("hide");
+			if (q == 1) {
+				foto.classList.add("foto-change");
+				fotoImg.classList.add("foto-img-change");
+				name.classList.add("i-am__name--margin");
+			} 
+			else if (q > 1 && contactText[0].classList.contains("hide") 
+				&& contactText[1].classList.contains("hide")) {
+				foto.classList.remove("foto-change");
+				fotoImg.classList.remove("foto-img-change");
+				name.classList.remove("i-am__name--margin");
+				q = 0;
+			}
+		}
+	})
+}
+
+
+	contact.addEventListener("click", (e) => {
+		if (e.target && e.target.classList.contains("contact-item") 
+			|| e.target.classList.contains("contact-item__icon") 
+			|| e.target.classList.contains("icon-js")) {
+			showContact(e);
+		}		
+	})
 
 	menu.addEventListener("click", (e) => {
 	console.log(e.target)
