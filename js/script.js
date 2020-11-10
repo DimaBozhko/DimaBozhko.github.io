@@ -8,14 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		menuItemText = document.querySelectorAll(".menu-item__text"),
 		bg = ["bg-green", "bg-red", "bg-blue"],
 		contentItem = document.querySelectorAll(".content-item"),
-		header = document.querySelector(".header");
+		header = document.querySelector(".header"),
+		main = document.querySelector(".main");
 
 let num = 0; 
 function hideMenuItem(e) {
 	num++;
 	for (let i = 0; i <= 2; i++) {
-		menuItem[i].classList.toggle("menu-item--hide")
-		header.classList.toggle("header-height")
+		menuItem[i].classList.toggle("menu-item--hide");
+		header.classList.toggle("header-height");
+
 	}
 	menuItem.forEach((item, i) => {
 		if (e.target == item) {
@@ -72,22 +74,26 @@ function showContent(e) {
 	menuItem.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
+			main.classList.toggle("main-show");
 		}
 	})
 	icon.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
+						main.classList.toggle("main-show");
 		}
 
 	})
 	menuItemText.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
+						main.classList.toggle("main-show");
 		}
 	})
 	iconJs.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
+						main.classList.toggle("main-show");
 		}
 	})	
 }
