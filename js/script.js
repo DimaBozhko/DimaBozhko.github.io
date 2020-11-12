@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		fotoImg = document.querySelector(".foto-img"),
 		name = document.querySelector(".i-am__name");
 
+	let wid = document.querySelector(".main");
+
+
+// function addWidth() {
+// 	menu.style.width = wid.clientWidth + "px";
+
+// }
+// addWidth();
+
+// window.addEventListener("resize", (e) => {
+// 	addWidth();
+// 	console.log(wid.clientWidth);	
+
+// })
 
 let num = 0; 
 function hideMenuItem(e) {
