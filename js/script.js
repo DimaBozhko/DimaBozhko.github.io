@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		contactItemIcon = document.querySelectorAll(".contact-item__icon"),
 		foto = document.querySelector(".foto"),
 		fotoImg = document.querySelector(".foto-img"),
-		name = document.querySelector(".i-am__name");
+		name = document.querySelector(".i-am__name"),
+		mainHeadline = document.querySelector(".main-headline"),
+		figures = document.querySelector(".figures");
 
 	let wid = document.querySelector(".main");
 
@@ -92,17 +94,41 @@ function hideMenuItem(e) {
 	})
 }
 
+let k = 0;
+
 function showContent(e) {
+	k++;
 	menuItem.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
 			main.classList.toggle("main-show");
 		}
+		if (k == 1) {
+			mainHeadline.classList.add("hide");
+			figures.classList.add("hide");
+		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
+			&& contentItem[1].classList.contains("height-hide")
+			&& contentItem[2].classList.contains("height-hide")) {
+			mainHeadline.classList.remove("hide");
+			figures.classList.remove("hide");
+			k = 0;
+		}
+
 	})
 	icon.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
 						main.classList.toggle("main-show");
+		}
+		if (k == 1) {
+			mainHeadline.classList.add("hide");
+			figures.classList.add("hide");
+		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
+			&& contentItem[1].classList.contains("height-hide")
+			&& contentItem[2].classList.contains("height-hide")) {
+			mainHeadline.classList.remove("hide");
+			figures.classList.remove("hide");
+			k = 0;
 		}
 
 	})
@@ -111,11 +137,32 @@ function showContent(e) {
 			contentItem[i].classList.toggle("height-hide");
 						main.classList.toggle("main-show");
 		}
+		if (k == 1) {
+			mainHeadline.classList.add("hide");
+			figures.classList.add("hide");
+		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
+			&& contentItem[1].classList.contains("height-hide")
+			&& contentItem[2].classList.contains("height-hide")) {
+			mainHeadline.classList.remove("hide");
+			figures.classList.remove("hide");
+			k = 0;
+		}
+
 	})
 	iconJs.forEach((item, i) => {
 		if (e.target == item) {
 			contentItem[i].classList.toggle("height-hide");
 						main.classList.toggle("main-show");
+		}
+		if (k == 1) {
+			mainHeadline.classList.add("hide");
+			figures.classList.add("hide");
+		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
+			&& contentItem[1].classList.contains("height-hide")
+			&& contentItem[2].classList.contains("height-hide")) {
+			mainHeadline.classList.remove("hide");
+			figures.classList.remove("hide");
+			k = 0;
 		}
 	})	
 }
