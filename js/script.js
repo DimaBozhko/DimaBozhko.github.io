@@ -1,5 +1,5 @@
 "use strict";
-
+ 
 document.addEventListener("DOMContentLoaded", () => {
 	let menu = document.querySelector(".menu"),
 		menuItem = document.querySelectorAll(".menu-item"),
@@ -20,18 +20,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		mainHeadline = document.querySelector(".main-headline"),
 		figures = document.querySelector(".figures");
 
-	let wid = document.querySelector(".main");
+// let wid = document.querySelector(".main");
+// 		let screen = window.innerWidth;
 
-
+// console.log(screen);
 // function addWidth() {
 // 	menu.style.width = wid.clientWidth + "px";
+// 	menu.style.left = ((screen - 12) - wid.clientWidth)  + "px";
 
 // }
 // addWidth();
+// 	if (screen > 549 && screen < 768) {
+// 		addWidth();
+// 		menu.style.left = ((screen - 12) - wid.clientWidth)  + "px";
 
+// 	} else {
+// 		menu.style.width = 100 + "%";
+// 	}
 // window.addEventListener("resize", (e) => {
-// 	addWidth();
-// 	console.log(wid.clientWidth);	
+// 		let screen = window.innerWidth;
+	
+// 			console.log(screen);
+
+// 	if (screen > 549 && screen < 768) {
+// 		addWidth();
+// 		menu.style.left = ((screen - 12) - wid.clientWidth)  + "px";
+
+// 	} else {
+// 		menu.style.width = 100 + "%";
+// 	}
+
+
+// 	// console.log(wid.clientWidth);	
 
 // })
 
