@@ -20,37 +20,63 @@ document.addEventListener("DOMContentLoaded", () => {
 		mainHeadline = document.querySelector(".main-headline"),
 		figures = document.querySelector(".figures");
 
-let wid = document.querySelector(".main");
-		let screen = window.innerWidth;
 
-console.log(screen);
-function addWidth() {
-	menu.style.width = wid.clientWidth + "px";
-	menu.style.left = ((screen - 12) - wid.clientWidth)  + "px";
+
+
+let wid = document.querySelector(".main").clientWidth;
+let screen = window.innerWidth;
+// 	if (screen > 549 && screen < 768) {
+// 		menu.style.width = (wid + 5) + "px";
+// 		menu.style.left = ((screen - 15) - wid)  + "px";
+
+// 	} else {
+// 		menu.style.width = 100 + "%";
+// 	}
+// window.addEventListener("resize", (e) => {
+// 		let wid = document.querySelector(".main").clientWidth;
+// 		let screen = window.innerWidth;
+// 	if (screen > 549 && screen < 768) {
+
+// 		menu.style.width = (wid + 5) + "px";
+// 		menu.style.left = ((screen - 15) - wid)  + "px";
+
+// 	} else {
+// 		menu.style.width = 100 + "%";
+// 	}
+// })
+
+// if (mediaScr.matches) {
+// 		menu.style.width = (wid + 5) + "px";
+// 		menu.style.left = ((screen - 15) - wid)  + "px";	
+// } else {
+// 		menu.style.width = 100 + "%";
+// }
+
+if (matchMedia) {
+	let mediaScr = window.matchMedia("(min-width: 550px)");
+	mediaScr.addListener(changes);
+	changes(mediaScr);
+};
+function changes(mediaScr) {
+	if (mediaScr.matches) {
+		menu.style.width = (wid + 5) + "px";
+		menu.style.left = ((screen - 15) - wid)  + "px";		
+	}	else {
+		menu.style.width = 100 + "%";
+	}
 }
-addWidth();
-	if (screen > 549 && screen < 768) {
-		addWidth();
-		menu.style.width = (wid.clientWidth + 5) + "px";
-		menu.style.left = ((screen - 15) - wid.clientWidth)  + "px";
-
-	} else {
-		menu.style.width = 100 + "%";
-	}
 window.addEventListener("resize", (e) => {
+		let wid = document.querySelector(".main").clientWidth;
 		let screen = window.innerWidth;
-			console.log(screen);
 	if (screen > 549 && screen < 768) {
-		addWidth();
-		menu.style.width = (wid.clientWidth + 5) + "px";
-		menu.style.left = ((screen - 15) - wid.clientWidth)  + "px";
+
+		menu.style.width = (wid + 5) + "px";
+		menu.style.left = ((screen - 15) - wid)  + "px";
 
 	} else {
 		menu.style.width = 100 + "%";
 	}
-	// console.log(wid.clientWidth);	
 })
-
 let num = 0; 
 function hideMenuItem(e) {
 	num++;
