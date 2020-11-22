@@ -65,18 +65,7 @@ function changes(mediaScr) {
 		menu.style.width = 100 + "%";
 	}
 }
-window.addEventListener("resize", (e) => {
-		let wid = document.querySelector(".main").clientWidth;
-		let screen = window.innerWidth;
-	if (screen > 549 && screen < 768) {
 
-		menu.style.width = (wid + 5) + "px";
-		menu.style.left = ((screen - 15) - wid)  + "px";
-
-	} else {
-		menu.style.width = 100 + "%";
-	}
-})
 let num = 0; 
 function hideMenuItem(e) {
 	num++;
