@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		menuItem = document.querySelectorAll(".menu-item"),
 		icon = document.querySelectorAll(".icon"),
 		iconJs = document.querySelectorAll(".icon-js"),
+		iconContact = document.querySelectorAll(".icons-contact"),
 		menuItemText = document.querySelectorAll(".menu-item__text"),
 		bg = ["bg-green", "bg-red", "bg-blue"],
 		contentItem = document.querySelectorAll(".content-item"),
@@ -18,53 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		fotoImg = document.querySelector(".foto-img"),
 		name = document.querySelector(".i-am__name"),
 		mainHeadline = document.querySelector(".main-headline"),
-		figures = document.querySelector(".figures");
+		figures = document.querySelector(".figures"),
+		box = document.querySelector(".box");
 
-
-
-
-let wid = document.querySelector(".main").clientWidth;
-let screen = window.innerWidth;
-// 	if (screen > 549 && screen < 768) {
-// 		menu.style.width = (wid + 5) + "px";
-// 		menu.style.left = ((screen - 15) - wid)  + "px";
-
-// 	} else {
-// 		menu.style.width = 100 + "%";
-// 	}
-// window.addEventListener("resize", (e) => {
-// 		let wid = document.querySelector(".main").clientWidth;
-// 		let screen = window.innerWidth;
-// 	if (screen > 549 && screen < 768) {
-
-// 		menu.style.width = (wid + 5) + "px";
-// 		menu.style.left = ((screen - 15) - wid)  + "px";
-
-// 	} else {
-// 		menu.style.width = 100 + "%";
-// 	}
-// })
-
-// if (mediaScr.matches) {
-// 		menu.style.width = (wid + 5) + "px";
-// 		menu.style.left = ((screen - 15) - wid)  + "px";	
-// } else {
-// 		menu.style.width = 100 + "%";
-// }
-
-if (matchMedia) {
-	let mediaScr = window.matchMedia("(min-width: 550px)");
-	mediaScr.addListener(changes);
-	changes(mediaScr);
-};
-function changes(mediaScr) {
-	if (mediaScr.matches) {
-		menu.style.width = (wid + 5) + "px";
-		menu.style.left = ((screen - 15) - wid)  + "px";		
-	}	else {
-		menu.style.width = 100 + "%";
-	}
-}
 
 let num = 0; 
 function hideMenuItem(e) {
@@ -135,12 +92,12 @@ function showContent(e) {
 			main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			mainHeadline.classList.add("hide");
+			box.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			mainHeadline.classList.remove("hide");
+			box.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -152,12 +109,12 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			mainHeadline.classList.add("hide");
+			box.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			mainHeadline.classList.remove("hide");
+			box.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -169,12 +126,12 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			mainHeadline.classList.add("hide");
+			box.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			mainHeadline.classList.remove("hide");
+			box.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -186,19 +143,19 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			mainHeadline.classList.add("hide");
+			box.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			mainHeadline.classList.remove("hide");
+			box.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
 	})	
 }
 
-let q = 0;
+let q = 0; 
 
 function showContact(e) {
 	console.log(e.target)
@@ -221,7 +178,7 @@ function showContact(e) {
 			}
 		}
 	})
-	iconJs.forEach((item, i) => {
+	iconContact.forEach((item, i) => {
 		if (e.target == item) {
 			contactText[i].classList.toggle("hide");
 			if (q == 1) {
@@ -239,18 +196,16 @@ function showContact(e) {
 		}
 	})
 }
-
-
 	contact.addEventListener("click", (e) => {
 		if (e.target && e.target.classList.contains("contact-item") 
 			|| e.target.classList.contains("contact-item__icon") 
-			|| e.target.classList.contains("icon-js")) {
+			|| e.target.classList.contains("icons-contact")) {
 			showContact(e);
 		}		
 	})
 
 	menu.addEventListener("click", (e) => {
-	console.log(e.target)
+		console.log(e.target)
 		if (e.target && e.target.classList.contains("menu-item") 
 			|| e.target.classList.contains("icon") || e.target.classList.contains("icon-js")  
 			|| e.target.classList.contains("menu-item__text")) {
