@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		name = document.querySelector(".i-am__name"),
 		mainHeadline = document.querySelector(".main-headline"),
 		figures = document.querySelector(".figures"),
-		box = document.querySelector(".box");
+		wrp = document.querySelector(".wrp");
 
 
 let num = 0; 
@@ -92,12 +92,12 @@ function showContent(e) {
 			main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			box.classList.add("hide");
+			wrp.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			box.classList.remove("hide");
+			wrp.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -109,12 +109,12 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			box.classList.add("hide");
+			wrp.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			box.classList.remove("hide");
+			wrp.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -126,12 +126,12 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			box.classList.add("hide");
+			wrp.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			box.classList.remove("hide");
+			wrp.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
@@ -143,12 +143,12 @@ function showContent(e) {
 						main.classList.toggle("main-show");
 		}
 		if (k == 1) {
-			box.classList.add("hide");
+			wrp.classList.add("hide");
 			figures.classList.add("hide");
 		} else if (k > 1 && contentItem[0].classList.contains("height-hide") 
 			&& contentItem[1].classList.contains("height-hide")
 			&& contentItem[2].classList.contains("height-hide")) {
-			box.classList.remove("hide");
+			wrp.classList.remove("hide");
 			figures.classList.remove("hide");
 			k = 0;
 		}
